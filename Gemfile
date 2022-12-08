@@ -73,3 +73,5 @@ group :test do
 end
 
 gem "tailwindcss-rails", "~> 2.0"
+
+gem "vite_rails", "~> 3.0"
