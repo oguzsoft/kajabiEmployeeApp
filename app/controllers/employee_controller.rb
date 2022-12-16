@@ -1,5 +1,5 @@
 class EmployeeController < ApplicationController
-  before_action :employeeService
+  before_action :employeeService #Create the service object with before action. Because we need this object in the below method
   def index
   end
 

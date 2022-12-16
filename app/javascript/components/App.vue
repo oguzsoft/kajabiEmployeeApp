@@ -54,23 +54,22 @@ export default {
         }
     },
     created() {
-        this.getEmployees();
+        this.getEmployees(); // Get the all employees from first page
     },
     methods: {
-        setPage: function (index) {
-            console.log("index = " + index)
+        setPage: function (index) {// Set the current page and get the data
             if (index > 0 && index <= this.pages) {
                 this.currentPageIndex = index;
                 this.getEmployees(index)
             }
         },
-        getEmployees(page) {
+        getEmployees(page) {//This method for getting data from related page
             return axios
                 .get("http://localhost:3000/employee/getEmps/"+page)
                 .then(response => {
-                    this.perpage = response.data.per_page
-                    this.totalPage = response.data.total_pages
-                    this.total = response.data.total
+                    this.perpage = response.data.per_page //Get the informations from API. Because it could be change
+                    this.totalPage = response.data.total_pages //Get the informations from API. Because it could be change
+                    this.total = response.data.total //Get the informations from API. Because it could be change
                     this.employees = response.data;
                 })
                 .catch(e => {
@@ -79,17 +78,17 @@ export default {
         },
     },
     computed: {
-        pages: function () {
+        pages: function () { //Calculate the total pages count 
             console.log("pages: " + Math.ceil(this.total / this.perpage));
             return Math.ceil(this.total / this.perpage);
         }
     },
 
     watch: {
-        searchKey: function () {
+        searchKey: function () { //Filter data acording to written text.
             if (this.currentPageIndex + 1 > this.pages)
                 this.currentPageIndex = this.pages - 1;
-                if(this.searchKey.length >= 3 && this.searchKey != ''){
+                if(this.searchKey.length >= 3 && this.searchKey != ''){ // I checked the word length because the performance of the application
                     return axios
                         .get("http://localhost:3000/employee/searchedData/"+this.searchKey)
                         .then(response => {

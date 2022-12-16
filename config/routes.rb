@@ -8,9 +8,4 @@ Rails.application.routes.draw do
   get 'employee/searchedData/:parameter', to: 'employee#searchedData'
   get 'employee/totalPages', to: 'employee#totalPages'
   get '/employee/:id', to: 'employee#show'
-  resources :employee
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "articles#index"
 end
