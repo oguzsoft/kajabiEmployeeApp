@@ -1,1 +1,44 @@
-<%= @employee %>
+<h1 style="font-size: 2rem; margin-bottom: 30px;"><%= "ID-" + @employee["data"]["id"].to_s + " Informations"%></h1>
+<div class="container flex">
+  <div class="col-md-4">
+    <div class="card" style="width: 18rem;">
+      <img src="<%= @employee["data"]["avatar"]%>" class="card-img-top" alt="...">
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"><%= @employee["data"]["first_name"] + " " + @employee["data"]["last_name"]%></li>
+          <li class="list-group-item"><%= @employee["data"]["email"] %></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <h1 style="font-weight: 500; font-size: 20px; margin-bottom: 20px;">Personal Informations</h1>
+    <div class="card" style="width: 25rem;">
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item" style="font-weight: 500;">Name</li>
+          <li class="list-group-item"><%= @employee["data"]["first_name"] + " " + @employee["data"]["last_name"]%></li>
+        </ul>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item" style="font-weight: 500;">Email</li>
+          <li class="list-group-item"><%= @employee["data"]["email"] %></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <h1 style="font-weight: 500; font-size: 20px; margin-bottom: 20px;">Support</h1>
+    <div class="card" style="width: 25rem;">
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item" style="font-weight: 500;">Support URL</li>
+          <li class="list-group-item"><%= @employee["support"]["url"] %></li>
+        </ul>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item" style="font-weight: 500;">Description</li>
+          <li class="list-group-item"><%= @employee["support"]["text"] %></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
