@@ -29,9 +29,7 @@ console.log('Visit the guide for more information: ', 'https://vite-ruby.netlify
 
 import { createApp } from "vue";
 import App from "../components/App.vue";
-
 const app = createApp(App);
 
 app.mount("#app");
-
 
