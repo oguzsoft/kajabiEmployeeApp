@@ -31,6 +31,8 @@ gem "jbuilder"
 gem "redis", "~> 4.0"
 
 gem "httparty"
+
+gem "json", "~> 2.6"
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
 
@@ -75,3 +77,5 @@ end
 gem "tailwindcss-rails", "~> 2.0"
 
 gem "vite_rails", "~> 3.0"
+
+gem "json", "~> 2.6"

@@ -33,6 +33,13 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
+"@ocrv/vue-tailwind-pagination@^0.0.4":
+  version "0.0.4"
+  resolved "https://registry.npmjs.org/@ocrv/vue-tailwind-pagination/-/vue-tailwind-pagination-0.0.4.tgz"
+  integrity sha512-HVAqa18gh6Nk4o3scqB8zZbXUhoJgFjIGm49N1Wc4q8XMo09jBSqo4OsNAFrYIDK5cK/Et8fH1NgLgzjVCDljQ==
+  dependencies:
+    vue "^3.0.5"
+
 "@originjs/vite-plugin-commonjs@^1.0.3":
   version "1.0.3"
   resolved "https://registry.npmjs.org/@originjs/vite-plugin-commonjs/-/vite-plugin-commonjs-1.0.3.tgz"
@@ -444,7 +451,7 @@ vite-plugin-ruby@^3.1.2:
   optionalDependencies:
     fsevents "~2.3.2"
 
-vue@^3.2.25, vue@3.2.45:
+vue@^3.0.5, vue@^3.2.25, vue@3.2.45:
   version "3.2.45"
   resolved "https://registry.npmjs.org/vue/-/vue-3.2.45.tgz"
   integrity sha512-9Nx/Mg2b2xWlXykmCwiTUCWHbWIj53bnkizBxKai1g61f2Xit700A1ljowpTIM11e3uipOeiPcSqnmBg6gyiaA==
