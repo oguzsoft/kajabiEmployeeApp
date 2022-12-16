@@ -10,6 +10,7 @@ I am getting this data from this API and using.
 There are 2 different screen to show the data.
   * index.html.erb (Calling VueJS)
   * show.html.erb (Rails Views)
+  
 On the index.html.erb is calling VueJS component to show that coming data in the list.
 This list has 2 features to paginate the data and search by email.
 
